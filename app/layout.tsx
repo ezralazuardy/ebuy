@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
+import { Chivo } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const rethink_sans = Rethink_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
+const chivo = Chivo({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || "Next App",
