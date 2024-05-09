@@ -1,0 +1,58 @@
+export const products = [
+  {
+    id: 1,
+    name: "Acme Headphones",
+    description: "Wireless Bluetooth headphones with noise cancelling",
+    price: 99.99,
+    unit: "pair",
+  },
+  {
+    id: 2,
+    name: "Acme Smartwatch",
+    description: "Waterproof smartwatch with heart rate monitor",
+    price: 199.99,
+    unit: "piece",
+  },
+  {
+    id: 3,
+    name: "Acme Fitness Tracker",
+    description: "Fitness tracker with step counter and sleep monitor",
+    price: 79.99,
+    unit: "piece",
+  },
+  {
+    id: 4,
+    name: "Acme Smart Plug",
+    description: "Smart plug that works with Alexa and Google Assistant",
+    price: 49.99,
+    unit: "piece",
+  },
+  {
+    id: 5,
+    name: "Acme Security Camera",
+    description: "Indoor security camera with motion detection",
+    price: 129.99,
+    unit: "piece",
+  },
+  {
+    id: 6,
+    name: "Acme Smart Thermostat",
+    description: "Smart thermostat that learns your schedule",
+    price: 149.99,
+    unit: "piece",
+  },
+  {
+    id: 7,
+    name: "Acme Smart Scale",
+    description: "Smart scale that measures weight and body fat",
+    price: 69.99,
+    unit: "piece",
+  },
+  {
+    id: 8,
+    name: "Acme Smart Lock",
+    description: "Smart lock that works with your smartphone",
+    price: 199.99,
+    unit: "piece",
+  },
+];
