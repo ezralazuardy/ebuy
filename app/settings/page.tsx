@@ -24,6 +24,7 @@ export default async function Settings() {
       <Header />
       <main className="container mx-auto py-12 px-4 md:px-6 flex flex-col items-center justify-center">
         <div className="grid gap-6 w-full max-w-2xl">
+          <h1 className="text-3xl font-bold">Settings</h1>
           <Card className="w-full">
             <CardHeader className="flex flex-col items-center space-y-4 p-6">
               <Avatar className="h-20 w-20">
