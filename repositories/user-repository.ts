@@ -1,5 +1,13 @@
-import { db } from "@/lib/drizzle/db";
+import { database } from "@/libraries/drizzle/db";
+import { injectable } from "inversify";
 
-export const getUsers = async () => {
-  return db.query.users.findMany();
-};
+@injectable()
+export class UserRepository {
+  constructor(private db: any) {
+    this.db = database;
+  }
+
+  async getUsers() {
+    return this.db.query.users.findMany();
+  }
+}

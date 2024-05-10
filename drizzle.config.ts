@@ -1,9 +1,9 @@
 import { defineConfig } from "drizzle-kit";
-import "@/lib/drizzle/env-config";
+import "@/libraries/drizzle/env-config";
 
 export default defineConfig({
-  schema: "./lib/drizzle/schema.ts",
-  out: "./migrations",
+  schema: "./libraries/drizzle/schema.ts",
+  out: "./libraries/drizzle/migrations",
   driver: "pg",
   dbCredentials: {
     connectionString: process.env.POSTGRES_URL!,

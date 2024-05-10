@@ -3,7 +3,7 @@ import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { products } from "@/lib/data";
+import { products } from "@/libraries/data";
 
 const items = products;
 

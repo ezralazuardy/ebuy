@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
-import "@/lib/reflect-metadata-client-side";
+import "@/libraries/reflect-metadata-client-side";
 import "@/app/globals.css";
 
 const inter = Inter({

@@ -1,4 +1,4 @@
-import { getUser, getEmailFrom } from "@/lib/utils";
+import { getUser, getEmailFrom } from "@/libraries/utils";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Label } from "@/components/ui/label";

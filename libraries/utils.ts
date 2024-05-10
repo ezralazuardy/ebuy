@@ -3,7 +3,6 @@ import { twMerge } from "tailwind-merge";
 import { currentUser } from "@clerk/nextjs/server";
 
 import type { User } from "@clerk/backend";
-import type { EmailAddress } from "@clerk/backend";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
