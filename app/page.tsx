@@ -1,5 +1,3 @@
-"use server";
-
 import container from "@/libraries/di/container";
 import Link from "next/link";
 import Image from "next/image";

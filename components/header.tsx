@@ -1,20 +1,26 @@
-"use server";
-
 import container from "@/libraries/di/container";
 import Link from "next/link";
 import Image from "next/image";
+import { SignOutButton } from "@clerk/nextjs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SERVICE_TYPES } from "@/services/types/service-types";
+import { User } from "@clerk/nextjs/server";
 import * as React from "react";
 import type UserService from "@/services/interfaces/user-service";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const userService: UserService = container.get(SERVICE_TYPES.UserService);
 
 export default async function Header() {
-  const user = await userService.getAuthenticatedUser();
+  const user: User = await userService.getAuthenticatedUser();
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm dark:bg-gray-950">
+    <header className="flex items-center justify-between px-12 py-4 bg-white shadow-sm dark:bg-gray-950">
       <Link className="flex items-center gap-2 font-semibold text-lg" href="/">
         <Package2Icon className="h-6 w-6" />
         <span>{process.env.NEXT_PUBLIC_APP_NAME}</span>
@@ -34,22 +40,36 @@ export default async function Header() {
           <ShoppingCartIcon className="h-5 w-5" />
           <span className="sr-only">Cart</span>
         </Button>
-        <Button className="rounded-full" size="icon" variant="ghost">
-          <Image
-            alt="User avatar"
-            className="rounded-full"
-            height={32}
-            src={user.imageUrl}
-            blurDataURL="/placeholder-user.jpg"
-            placeholder="blur"
-            style={{
-              aspectRatio: "32/32",
-              objectFit: "cover",
-            }}
-            width={32}
-          />
-          <span className="sr-only">User menu</span>
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="rounded-full">
+            <Image
+              alt="avatar"
+              className="rounded-full"
+              height={32}
+              src={user.imageUrl}
+              blurDataURL="/placeholder-user.jpg"
+              placeholder="blur"
+              style={{
+                aspectRatio: "32/32",
+                objectFit: "cover",
+              }}
+              width={32}
+            />
+            <span className="sr-only">User menu</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-52 mr-12 mt-2">
+            <DropdownMenuItem>
+              <Link className="w-full" href="/settings">
+                Settings
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <SignOutButton>
+                <button className="w-full text-start">Sign out</button>
+              </SignOutButton>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
   );
