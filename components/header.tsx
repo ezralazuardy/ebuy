@@ -1,10 +1,18 @@
+"use server";
+
+import container from "@/libraries/di/container";
 import Link from "next/link";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { SERVICE_TYPES } from "@/services/types/service-types";
 import * as React from "react";
+import type UserService from "@/services/interfaces/user-service";
 
-export default function Header() {
+const userService: UserService = container.get(SERVICE_TYPES.UserService);
+
+export default async function Header() {
+  const user = await userService.getAuthenticatedUser();
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm dark:bg-gray-950">
       <Link className="flex items-center gap-2 font-semibold text-lg" href="/">
@@ -31,7 +39,9 @@ export default function Header() {
             alt="User avatar"
             className="rounded-full"
             height={32}
-            src="/placeholder.svg"
+            src={user.imageUrl}
+            blurDataURL="/placeholder-user.jpg"
+            placeholder="blur"
             style={{
               aspectRatio: "32/32",
               objectFit: "cover",
