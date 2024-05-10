@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "@/app/globals.css";
 
@@ -25,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <UserProvider>
+      <ClerkProvider>
         <body className={inter.className}>
           <ThemeProvider
             attribute="class"
@@ -38,7 +39,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </body>
-      </UserProvider>
+      </ClerkProvider>
     </html>
   );
 }
