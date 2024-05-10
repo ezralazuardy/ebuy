@@ -27,8 +27,8 @@ bun dev
 
 This project is using the following services:
 
-[x] [Clerk](https://clerk.com) for Authentication
-[x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
-[x] [Bun](https://bun.sh) for Development
+- [x] [Clerk](https://clerk.com) for Authentication
+- [x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
+- [x] [Bun](https://bun.sh) for Development
 
 > Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
