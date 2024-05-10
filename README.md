@@ -10,14 +10,25 @@ A Dummy App for E-Commerce Workflow.
 
 ### 🚀 quickstart
 
-[bun](https://bun.sh) is highly recommended to run this project. please setup your own `.env.local` based on `.env.example` before running the project.
+Please setup your own `.env.local` based on `.env.example` before running the project.
 
 ```bash
+# install dependencies
 bun install
 
+# pull environment variables from vercel
 vercel env pull .env.local
 
+# run the project
 bun dev
 ```
 
-> Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
+### ☁️ services
+
+This project is using the following services:
+
+[x] [Clerk](https://clerk.com) for Authentication
+[x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
+[x] [Bun](https://bun.sh) for Development
+
+> Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
