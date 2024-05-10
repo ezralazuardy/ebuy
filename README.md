@@ -8,4 +8,4 @@
 
 A Dummy App for E-Commerce Workflow.
 
-> Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org). Powered by [Vercel](https://vercel.com) and [Auth0](https://auth0.com).
+> Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
