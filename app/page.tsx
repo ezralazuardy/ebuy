@@ -1,19 +1,26 @@
+"use server";
+
+import container from "@/libraries/di/container";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { products } from "@/libraries/data";
+import { SERVICE_TYPES } from "@/services/types/service-types";
+import type ProductService from "@/services/interfaces/product-service";
 
-const items = products;
+const productService: ProductService = container.get(
+  SERVICE_TYPES.ProductService,
+);
 
-export default function Products() {
+export default async function Products() {
+  const items = await productService.getProducts();
   return (
     <>
       <Header />
       <main className="container mx-auto py-12 px-4 md:px-6">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {items.map((item) => (
+          {items.map((item: any) => (
             <div
               key={item.id}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
