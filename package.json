@@ -24,6 +24,7 @@
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.30.10",
     "inversify": "^6.0.2",
+    "lucide-react": "^0.378.0",
     "next": "^14.2.3",
     "next-themes": "^0.3.0",
     "pg": "^8.11.5",
