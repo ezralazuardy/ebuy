@@ -23,16 +23,14 @@ vercel env pull .env.local
 bun dev
 ```
 
-### ☁️ services
+### 🗂️ libraries
 
-This project is using the following services and libraries:
+This project is using the following libraries:
 
-- [x] [Bun](https://bun.sh) for Development
-- [x] [Clerk](https://clerk.com) for Authentication
-- [x] [Jotai](https://jotai.org) for State Management
-- [x] [Drizzle](https://orm.drizzle.team) for Typescript ORM
-- [x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
-- [x] [Next](https://nextjs.org) for Framework
+- [x] [clerk](https://clerk.com) for Authentication
+- [x] [jotai](https://jotai.org) for State Management
+- [x] [drizzle](https://orm.drizzle.team) for Typescript ORM
+- [x] [inversivy](https://inversify.io) for Typescript IoC
 - [x] [shadcn/ui](https://ui.shadcn.com) for UI Components
 
 > Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
