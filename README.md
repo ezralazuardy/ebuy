@@ -25,10 +25,14 @@ bun dev
 
 ### ☁️ services
 
-This project is using the following services:
+This project is using the following services and libraries:
 
-- [x] [Clerk](https://clerk.com) for Authentication
-- [x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
 - [x] [Bun](https://bun.sh) for Development
+- [x] [Clerk](https://clerk.com) for Authentication
+- [x] [Jotai](https://jotai.org) for State Management
+- [x] [Drizzle](https://orm.drizzle.team) for Typescript ORM
+- [x] [Vercel](https://vercel.com) for Hosting and Storage (Postgres)
+- [x] [Next](https://nextjs.org) for Framework
+- [x] [shadcn/ui](https://ui.shadcn.com) for UI Components
 
 > Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
