@@ -1,3 +1,4 @@
+import { useParams } from "next/navigation";
 import container from "@/libraries/di/container";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +13,8 @@ const productService: ProductService = container.get(
 );
 
 export default async function Products() {
+  const params = useParams<{ search: string }>();
+  console.log(params);
   const items = await productService.getProducts();
   return (
     <>
