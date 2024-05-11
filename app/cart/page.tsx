@@ -9,12 +9,9 @@ export default function Cart() {
   return (
     <>
       <Header />
-      <main className="mt-12">
+      <main className="mx-12 my-12">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Your Cart</h2>
-          <Link className="text-blue-600 hover:underline" href="#">
-            View all
-          </Link>
         </div>
         <div className="mt-6 border rounded-lg overflow-hidden">
           <table className="w-full">
@@ -149,7 +146,7 @@ export default function Cart() {
             </tbody>
           </table>
         </div>
-        <div className="mt-6 flex justify-end">
+        <div className="mt-12 flex justify-end">
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
             <div className="flex items-center justify-between">
               <span className="text-gray-500 dark:text-gray-400">Subtotal</span>

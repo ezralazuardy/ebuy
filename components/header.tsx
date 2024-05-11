@@ -17,10 +17,9 @@ export default function Header() {
           <Link href="/cart">
             <Button className="rounded-full" size="icon" variant="ghost">
               <ShoppingCart className="h-5 w-5" />
-              <span className="sr-only">Cart</span>
             </Button>
           </Link>
-          <div className="w-8 grid grid-cols-1content-center">
+          <div className="w-8 grid grid-cols-1 content-center">
             <UserButton />
           </div>
         </div>
