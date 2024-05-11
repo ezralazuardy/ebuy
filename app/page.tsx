@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ProductItems from "@/components/product-items";
+import ProductItem from "@/components/product-item";
+import ProductItemSkeleton from "@/components/product-item-skeleton";
 
 interface Props {
   searchParams?: {
@@ -17,8 +18,8 @@ export default async function Products({ searchParams }: Props) {
   return (
     <>
       <Header />
-      <Suspense key={query + currentPage} fallback={<span>Loading...</span>}>
-        <ProductItems search={query} />
+      <Suspense key={query + currentPage} fallback={<ProductItemSkeleton />}>
+        <ProductItem search={query} />
       </Suspense>
       <Footer />
     </>

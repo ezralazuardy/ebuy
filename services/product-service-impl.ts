@@ -10,6 +10,9 @@ export default class ProductServiceImpl implements ProductService {
   private productRepository: ProductRepository;
 
   async getProducts(name: string): Promise<Array<any>> {
+    // simulate loading time
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+
     let products = await this.productRepository.getProducts();
 
     if (name !== "") {

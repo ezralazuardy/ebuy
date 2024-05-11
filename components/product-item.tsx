@@ -9,7 +9,7 @@ interface Props {
   search: string;
 }
 
-export default async function ProductItems({ search }: Props) {
+export default async function ProductItem({ search }: Props) {
   const items = await productService.getProducts(search);
   return (
     <main className="container mx-auto py-12 px-4 md:px-6">
