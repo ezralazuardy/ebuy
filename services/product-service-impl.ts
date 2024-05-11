@@ -9,8 +9,16 @@ export default class ProductServiceImpl implements ProductService {
   @inject(REPOSITORY_TYPES.ProductRepository)
   private productRepository: ProductRepository;
 
-  async getProducts(): Promise<Array<any>> {
-    return this.productRepository.getProducts();
+  async getProducts(name: string): Promise<Array<any>> {
+    let products = await this.productRepository.getProducts();
+
+    if (name !== "") {
+      return products.filter((product) =>
+        product.name.toLowerCase().includes(name.toLowerCase()),
+      );
+    }
+
+    return products;
   }
 
   async findProduct(): Promise<any> {

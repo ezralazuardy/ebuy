@@ -1,5 +1,5 @@
 export default interface ProductService {
-  getProducts(): any;
+  getProducts(name: string): Promise<Array<any>>;
   findProduct(): any;
   createProduct(): any;
   updateProduct(): any;
