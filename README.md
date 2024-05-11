@@ -29,8 +29,8 @@ This project is using the following libraries:
 
 - [x] [clerk](https://clerk.com) for Authentication
 - [x] [jotai](https://jotai.org) for State Management
+- [x] [shadcn/ui](https://ui.shadcn.com) for UI Components
 - [x] [drizzle](https://orm.drizzle.team) for Typescript ORM
 - [x] [inversivy](https://inversify.io) for Typescript IoC
-- [x] [shadcn/ui](https://ui.shadcn.com) for UI Components
 
 > Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
