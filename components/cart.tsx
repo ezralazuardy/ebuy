@@ -7,9 +7,22 @@ import CartCheckoutButton from "@/components/cart-checkout-button";
 import CartEntry from "@/components/cart-entry";
 
 export default function Cart() {
-  const { removeItem, cartDetails, clearCart, totalPrice } = useShoppingCart();
+  const {
+    removeItem,
+    incrementItem,
+    decrementItem,
+    clearCart,
+    cartDetails,
+    totalPrice,
+  } = useShoppingCart();
   const cartEntries = Object.values(cartDetails ?? {}).map((entry) => (
-    <CartEntry key={entry.id} entry={entry} removeItem={removeItem} />
+    <CartEntry
+      key={entry.id}
+      entry={entry}
+      removeItem={removeItem}
+      incrementItem={incrementItem}
+      decrementItem={decrementItem}
+    />
   ));
   const cartIsEmpty = cartEntries.length === 0;
   const cartIsNotEmpty = !cartIsEmpty;

@@ -1,16 +1,29 @@
-import { formatCurrencyString } from "use-shopping-cart";
 import { CartEntry as ICartEntry } from "use-shopping-cart/core";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 
+type Props = {
+  entry: ICartEntry;
+  removeItem: (id: string) => undefined;
+  incrementItem: (id: string, options?: { count: number }) => undefined;
+  decrementItem: (id: string, options?: { count: number }) => undefined;
+};
+
 export default function CartEntry({
   entry,
   removeItem,
-}: {
-  entry: ICartEntry;
-  removeItem: (id: string) => undefined;
-}) {
+  incrementItem,
+  decrementItem,
+}: Props) {
+  function increaseQuantity() {
+    incrementItem(entry.id, { count: 1 });
+  }
+
+  function decreaseQuantity() {
+    decrementItem(entry.id, { count: 1 });
+  }
+
   return (
     <tr className="border-t border-gray-200 dark:border-gray-800">
       <td className="px-4 py-4 flex items-center gap-4">
@@ -35,14 +48,24 @@ export default function CartEntry({
       <td className="px-4 py-4 font-semibold">${entry.price.toFixed(2)}</td>
       <td className="px-4 py-4">
         <div className="flex items-center gap-2">
-          <Button className="rounded-full" size="icon" variant="outline">
+          <Button
+            className="rounded-full"
+            size="icon"
+            variant="outline"
+            onClick={() => decreaseQuantity()}
+          >
             <MinusIcon className="h-4 w-4" />
-            <span className="sr-only">Decrease</span>
+            <span className="sr-only">Decrease Quantity</span>
           </Button>
           <span>{entry.quantity}</span>
-          <Button className="rounded-full" size="icon" variant="outline">
+          <Button
+            className="rounded-full"
+            size="icon"
+            variant="outline"
+            onClick={() => increaseQuantity()}
+          >
             <PlusIcon className="h-4 w-4" />
-            <span className="sr-only">Increase</span>
+            <span className="sr-only">Increase Quantity</span>
           </Button>
         </div>
       </td>
