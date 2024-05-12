@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import ProductItem from "@/components/product-item";
-import ProductItemSkeleton from "@/components/product-item-skeleton";
+import ProductList from "@/components/product-list";
+import ProductListSkeleton from "@/components/product-list-skeleton";
 
 type Props = {
   searchParams?: {
@@ -14,8 +14,8 @@ export default async function Page({ searchParams }: Props) {
   const currentPage = Number(searchParams?.page) || 1;
 
   return (
-    <Suspense key={query + currentPage} fallback={<ProductItemSkeleton />}>
-      <ProductItem search={query} />
+    <Suspense key={query + currentPage} fallback={<ProductListSkeleton />}>
+      <ProductList search={query} />
     </Suspense>
   );
 }

@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Provider } from "jotai";
-import type { Metadata } from "next";
+import CartProvider from "@/providers/cart-provider";
+import ThemeProvider from "@/providers/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "@/libraries/di/reflect-metadata";
@@ -28,20 +28,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Provider>
-      <ClerkProvider>
-        <html lang="en">
-          <body className={rubik.className}>
+    <html lang="en">
+      <body className={rubik.className}>
+        <ClerkProvider>
+          <CartProvider>
             <ThemeProvider>
               <Header />
               {children}
               <Footer />
             </ThemeProvider>
-            <Analytics />
-            <SpeedInsights />
-          </body>
-        </html>
-      </ClerkProvider>
-    </Provider>
+          </CartProvider>
+        </ClerkProvider>
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
   );
 }
