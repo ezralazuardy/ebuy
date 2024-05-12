@@ -31,14 +31,15 @@ export default function ProductEntry({ item }: Props) {
       <Link href={`product?id=${item.id}`}>
         <Image
           alt={item.name}
+          src={item.image_url}
           className="w-full h-64 object-cover group-hover:opacity-50 transition-opacity"
           height={500}
-          src={item.image_url}
+          width={500}
           style={{
             aspectRatio: "500/500",
             objectFit: "cover",
           }}
-          width={500}
+          priority
         />
       </Link>
       <div className="p-4">

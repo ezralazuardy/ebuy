@@ -27,10 +27,11 @@ export default function ProductDetail({ item }: Props) {
       <div>
         <Image
           alt={item.name}
+          src={item.image_url}
           className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
           height={600}
-          src={item.image_url}
           width={600}
+          priority
         />
       </div>
       <div className="grid gap-20">
