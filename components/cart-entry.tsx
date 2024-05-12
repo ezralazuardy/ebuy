@@ -32,7 +32,7 @@ export default function CartEntry({
           </p>
         </div>
       </td>
-      <td className="px-4 py-4 font-semibold">${entry.price}</td>
+      <td className="px-4 py-4 font-semibold">${entry.price.toFixed(2)}</td>
       <td className="px-4 py-4">
         <div className="flex items-center gap-2">
           <Button className="rounded-full" size="icon" variant="outline">
@@ -46,7 +46,7 @@ export default function CartEntry({
           </Button>
         </div>
       </td>
-      <td className="px-4 py-4 font-semibold">${entry.value}</td>
+      <td className="px-4 py-4 font-semibold">${entry.value.toFixed(2)}</td>
       <td className="px-4 py-4 text-right">
         <Button
           className="rounded-full"

@@ -13,6 +13,7 @@ export default function Cart() {
   ));
   const cartIsEmpty = cartEntries.length === 0;
   const cartIsNotEmpty = !cartIsEmpty;
+  const fixedTotalPrice = totalPrice ? totalPrice.toFixed(2) : 0;
   return (
     <>
       <div className="mt-6 border rounded-lg overflow-hidden">
@@ -56,17 +57,17 @@ export default function Cart() {
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
             <div className="flex items-center justify-between">
               <span className="text-gray-500 dark:text-gray-400">Subtotal</span>
-              <span className="font-semibold">${totalPrice}</span>
+              <span className="font-semibold">${fixedTotalPrice}</span>
             </div>
             <Separator className="my-4" />
             <div className="flex items-center justify-between">
               <span className="text-gray-500 dark:text-gray-400">Shipping</span>
-              <span className="font-semibold">$0</span>
+              <span className="font-semibold">${0}</span>
             </div>
             <Separator className="my-4" />
             <div className="flex items-center justify-between">
               <span className="text-gray-500 dark:text-gray-400">Total</span>
-              <span className="font-semibold">${totalPrice}</span>
+              <span className="font-semibold">${fixedTotalPrice}</span>
             </div>
             <div className="flex justify-end">
               <Button
