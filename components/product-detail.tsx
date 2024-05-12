@@ -9,7 +9,7 @@ type Props = {
   item: Product;
 };
 
-export default function itemDetail({ item }: Props) {
+export default function ProductDetail({ item }: Props) {
   const { addItem } = useShoppingCart();
 
   function addToCart() {
