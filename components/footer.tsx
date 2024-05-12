@@ -1,4 +1,4 @@
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_APP_NAME}. All
           rights reserved.
         </p>
-        {/* <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-4">
           <Link
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 text-sm"
             href="policy"
@@ -21,13 +21,7 @@ export default function Footer() {
           >
             Terms of Service
           </Link>
-          <Link
-            className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 text-sm"
-            href="contact"
-          >
-            Contact Us
-          </Link>
-        </nav> */}
+        </nav>
       </div>
     </footer>
   );

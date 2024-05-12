@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import "@/libraries/di/reflect-metadata-client-side";
 import "@/app/globals.css";
 
-const inter = Inter({
+const rubik = Rubik({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <Provider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={rubik.className}>
           <ClerkProvider>
             <ThemeProvider
               attribute="class"

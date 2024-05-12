@@ -25,7 +25,7 @@ export default function SearchBar({ label }: Props) {
     replace(`${pathname}?${params.toString()}`);
   }
 
-  const debouncedSearchHandler = debounce(searchHandler, 1000);
+  const debouncedSearchHandler = debounce(searchHandler, 500);
 
   return (
     <div className="relative">
