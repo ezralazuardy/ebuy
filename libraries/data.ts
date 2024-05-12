@@ -97,4 +97,28 @@ export const products = [
     statement_description: "eBuy Purchase",
     marketing_feature: "Level Up Your Fitness Journey, Effortlessly",
   },
+  {
+    id: "price_1PFlZSFxwozpGZ72PAm6oLC8",
+    image_url: "/price_1PFlZSFxwozpGZ72PAm6oLC8.jpg",
+    name: "Stainless Steel Mug",
+    price: 14.99,
+    unit: "Each",
+    short_description: "Keep your drink hot or cold",
+    description:
+      "Enjoy your favorite beverages on the go with our Stainless Steel Mug. This double-walled insulated mug keeps your drinks hot for hours or cold for extended periods, allowing you to savor them at the perfect temperature. The leak-proof lid prevents spills and messes, making it ideal for travel or everyday use. Crafted from durable stainless steel, this mug is built to last and is a sustainable alternative to disposable cups. Invest in a Stainless Steel Mug and enjoy your beverages on the go, worry-free.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Drinks on the Go, Perfectly Tempered",
+  },
+  {
+    id: "price_1PFlaYFxwozpGZ72R4blzj2g",
+    image_url: "/price_1PFlaYFxwozpGZ72R4blzj2g.jpg",
+    name: "Coffee Maker",
+    price: 39.99,
+    unit: "Each",
+    short_description: "Brew your perfect cup every time",
+    description:
+      "Start your day right with a fresh cup of coffee brewed with our Coffee Maker. This user-friendly coffee maker features a simple design and intuitive controls, making it easy to brew delicious coffee at home. The programmable timer allows you to schedule your coffee to be ready when you wake up, ensuring a smooth and energized start to your day. With a large capacity carafe and a variety of brewing options, this coffee maker caters to all your coffee needs. Enjoy the convenience and aroma of freshly brewed coffee at home with our Coffee Maker.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Fresh Coffee, Perfectly Brewed, Every Time",
+  },
 ];
