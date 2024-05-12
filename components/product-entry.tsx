@@ -28,17 +28,19 @@ export default function ProductEntry({ item }: Props) {
       key={item.id}
       className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
     >
-      <Image
-        alt={item.name}
-        className="w-full h-64 object-cover group-hover:opacity-50 transition-opacity"
-        height={500}
-        src={item.image_url}
-        style={{
-          aspectRatio: "500/500",
-          objectFit: "cover",
-        }}
-        width={500}
-      />
+      <Link href={`product?id=${item.id}`}>
+        <Image
+          alt={item.name}
+          className="w-full h-64 object-cover group-hover:opacity-50 transition-opacity"
+          height={500}
+          src={item.image_url}
+          style={{
+            aspectRatio: "500/500",
+            objectFit: "cover",
+          }}
+          width={500}
+        />
+      </Link>
       <div className="p-4">
         <h3 className="font-semibold text-lg">{item.name}</h3>
         <p className="text-gray-500 dark:text-gray-400 text-sm">

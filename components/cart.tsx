@@ -74,11 +74,6 @@ export default function Cart() {
             </div>
             <Separator className="my-4" />
             <div className="flex items-center justify-between">
-              <span className="text-gray-500 dark:text-gray-400">Shipping</span>
-              <span className="font-semibold">${0}</span>
-            </div>
-            <Separator className="my-4" />
-            <div className="flex items-center justify-between">
               <span className="text-gray-500 dark:text-gray-400">Total</span>
               <span className="font-semibold">${fixedTotalPrice}</span>
             </div>

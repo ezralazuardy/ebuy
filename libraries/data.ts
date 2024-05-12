@@ -3,7 +3,7 @@
 export const products = [
   {
     id: "price_1PFf3OFxwozpGZ725OE5Gw8b",
-    image_url: "/placeholder.svg",
+    image_url: "/price_1PFf3OFxwozpGZ725OE5Gw8b.jpg",
     name: "Super Comfy Pillow",
     price: 29.99,
     unit: "Each",
@@ -15,7 +15,7 @@ export const products = [
   },
   {
     id: "price_1PFfK4FxwozpGZ72cRIC8wdB",
-    image_url: "/placeholder.svg",
+    image_url: "/price_1PFfK4FxwozpGZ72cRIC8wdB.jpg",
     name: "Energy Boost Smoothie",
     price: 14.95,
     unit: "Pack",
@@ -27,7 +27,7 @@ export const products = [
   },
   {
     id: "price_1PFfL9FxwozpGZ725dpaFg9l",
-    image_url: "/placeholder.svg",
+    image_url: "/price_1PFfL9FxwozpGZ725dpaFg9l.jpg",
     name: "Noise Cancelling Headphones",
     price: 199.0,
     unit: "Pair",
@@ -39,7 +39,7 @@ export const products = [
   },
   {
     id: "price_1PFfMHFxwozpGZ721xe2E2fV",
-    image_url: "/placeholder.svg",
+    image_url: "/price_1PFfMHFxwozpGZ721xe2E2fV.jpg",
     name: "Eco-Clean All Purpose",
     price: 7.99,
     unit: "Bottle",
