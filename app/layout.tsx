@@ -1,13 +1,13 @@
 import { Rubik } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Provider } from "jotai";
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import "@/libraries/di/reflect-metadata-client-side";
+import "@/libraries/di/reflect-metadata";
 import "@/app/globals.css";
 
 const rubik = Rubik({
@@ -29,24 +29,19 @@ export default function RootLayout({
 }>) {
   return (
     <Provider>
-      <html lang="en">
-        <body className={rubik.className}>
-          <ClerkProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="light"
-              enableSystem
-              disableTransitionOnChange
-            >
+      <ClerkProvider>
+        <html lang="en">
+          <body className={rubik.className}>
+            <ThemeProvider>
               <Header />
               {children}
               <Footer />
             </ThemeProvider>
-          </ClerkProvider>
-          <Analytics />
-          <SpeedInsights />
-        </body>
-      </html>
+            <Analytics />
+            <SpeedInsights />
+          </body>
+        </html>
+      </ClerkProvider>
     </Provider>
   );
 }

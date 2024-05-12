@@ -1,41 +1,27 @@
 import "reflect-metadata";
 import { Container } from "inversify";
-import { REPOSITORY_TYPES } from "@/repositories/types/repository-types";
-import { SERVICE_TYPES } from "@/services/types/service-types";
-import ProductRepository from "@/repositories/interfaces/product-repository";
-import ProductRepositoryImpl from "@/repositories/product-repository-impl";
-import ProductService from "@/services/interfaces/product-service";
-import ProductServiceImpl from "@/services/product-service-impl";
-import UserService from "@/services/interfaces/user-service";
-import UserServiceImpl from "@/services/user-service-impl";
+import ProductRepository from "@/repositories/product-repository";
+import ProductService from "@/services/product-service";
+import UserService from "@/services/user-service";
 
 const container = new Container();
 
-container
-  .bind<ProductRepository>(REPOSITORY_TYPES.ProductRepository)
-  .to(ProductRepositoryImpl)
-  .inSingletonScope();
+container.bind(ProductRepository).to(ProductRepository).inSingletonScope();
 
-container
-  .bind<ProductService>(SERVICE_TYPES.ProductService)
-  .to(ProductServiceImpl)
-  .inSingletonScope();
+container.bind(ProductService).to(ProductService).inSingletonScope();
 
-container
-  .bind<UserService>(SERVICE_TYPES.UserService)
-  .to(UserServiceImpl)
-  .inSingletonScope();
+container.bind(UserService).to(UserService).inSingletonScope();
 
 export default container;
 
 export function getProductRepository(): ProductRepository {
-  return container.get<ProductRepository>(REPOSITORY_TYPES.ProductRepository);
+  return container.get(ProductRepository);
 }
 
 export function getProductService(): ProductService {
-  return container.get<ProductService>(SERVICE_TYPES.ProductService);
+  return container.get(ProductService);
 }
 
 export function getUserService(): UserService {
-  return container.get<UserService>(SERVICE_TYPES.UserService);
+  return container.get(UserService);
 }

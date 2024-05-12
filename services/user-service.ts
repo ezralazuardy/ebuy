@@ -1,10 +1,9 @@
 import "reflect-metadata";
 import { injectable } from "inversify";
 import { User, currentUser } from "@clerk/nextjs/server";
-import UserService from "@/services/interfaces/user-service";
 
 @injectable()
-export default class UserServiceImpl implements UserService {
+export default class UserService {
   async getAuthenticatedUser(): Promise<User> {
     const user = await currentUser();
 
