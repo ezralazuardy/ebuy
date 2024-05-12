@@ -23,7 +23,7 @@ export default function itemDetail({ item }: Props) {
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-20 items-start max-w-7xl px-4 mx-auto py-24">
+    <div className="grid md:grid-cols-2 gap-20 items-start max-w-7xl px-4 mx-auto py-20">
       <div>
         <Image
           alt={item.name}
