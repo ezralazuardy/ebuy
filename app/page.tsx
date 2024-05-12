@@ -1,6 +1,4 @@
 import { Suspense } from "react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import ProductItem from "@/components/product-item";
 import ProductItemSkeleton from "@/components/product-item-skeleton";
 
@@ -16,12 +14,8 @@ export default async function Page({ searchParams }: Props) {
   const currentPage = Number(searchParams?.page) || 1;
 
   return (
-    <>
-      <Header />
-      <Suspense key={query + currentPage} fallback={<ProductItemSkeleton />}>
-        <ProductItem search={query} />
-      </Suspense>
-      <Footer />
-    </>
+    <Suspense key={query + currentPage} fallback={<ProductItemSkeleton />}>
+      <ProductItem search={query} />
+    </Suspense>
   );
 }

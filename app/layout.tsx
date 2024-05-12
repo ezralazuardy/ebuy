@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Provider } from "jotai";
 import type { Metadata } from "next";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import "@/libraries/di/reflect-metadata-client-side";
 import "@/app/globals.css";
 
@@ -36,7 +38,9 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
+              <Header />
               {children}
+              <Footer />
             </ThemeProvider>
           </ClerkProvider>
           <Analytics />

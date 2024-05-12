@@ -27,10 +27,12 @@ bun dev
 
 This project is using the following libraries:
 
-- [x] [clerk](https://clerk.com) for Authentication
-- [x] [jotai](https://jotai.org) for State Management
-- [x] [shadcn/ui](https://ui.shadcn.com) for UI Component
-- [x] [drizzle](https://orm.drizzle.team) for Typescript ORM
-- [x] [inversivy](https://inversify.io) for Typescript IoC
+- [x] [clerk](https://clerk.com) for authentication
+- [x] [stripe](https://stripe.com) for payment gateway
+- [x] [use-shopping-cart](https://useshoppingcart.com) for stripe wrapper
+- [x] [jotai](https://jotai.org) for state management
+- [x] [shadcn/ui](https://ui.shadcn.com) for UI component
+- [x] [drizzle](https://orm.drizzle.team) for typescript ORM
+- [x] [inversivy](https://inversify.io) for typescript IoC
 
 > Written in [Typescript](https://typescriptlang.org) using [Next](https://nextjs.org) and [Bun](https://bun.sh). Powered by [Vercel](https://vercel.com) and [Clerk](https://clerk.com).
