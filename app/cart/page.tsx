@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 
-export default function Cart() {
+export default function Page() {
   return (
     <>
       <Header />
-      <main className="mx-12 my-12">
+      <main className="mx-12 mt-12 min-h-screen">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Your Cart</h2>
+          <h2 className="text-4xl font-bold">Your Cart</h2>
         </div>
         <div className="mt-6 border rounded-lg overflow-hidden">
           <table className="w-full">
@@ -78,60 +78,6 @@ export default function Cart() {
                   </div>
                 </td>
                 <td className="px-4 py-4 font-semibold">$99.99</td>
-                <td className="px-4 py-4 text-right">
-                  <Button
-                    className="rounded-full"
-                    size="icon"
-                    variant="outline"
-                  >
-                    <TrashIcon className="h-4 w-4" />
-                    <span className="sr-only">Remove from cart</span>
-                  </Button>
-                </td>
-              </tr>
-              <tr className="border-t border-gray-200 dark:border-gray-800">
-                <td className="px-4 py-4 flex items-center gap-4">
-                  <Image
-                    alt="Product 2"
-                    className="rounded-md"
-                    height={64}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "64/64",
-                      objectFit: "cover",
-                    }}
-                    width={64}
-                  />
-                  <div>
-                    <h4 className="font-semibold">Acme Smartwatch</h4>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      Sleek and modern design
-                    </p>
-                  </div>
-                </td>
-                <td className="px-4 py-4 font-semibold">$199.99</td>
-                <td className="px-4 py-4">
-                  <div className="flex items-center gap-2">
-                    <Button
-                      className="rounded-full"
-                      size="icon"
-                      variant="outline"
-                    >
-                      <MinusIcon className="h-4 w-4" />
-                      <span className="sr-only">Decrease quantity</span>
-                    </Button>
-                    <span>1</span>
-                    <Button
-                      className="rounded-full"
-                      size="icon"
-                      variant="outline"
-                    >
-                      <PlusIcon className="h-4 w-4" />
-                      <span className="sr-only">Increase quantity</span>
-                    </Button>
-                  </div>
-                </td>
-                <td className="px-4 py-4 font-semibold">$199.99</td>
                 <td className="px-4 py-4 text-right">
                   <Button
                     className="rounded-full"

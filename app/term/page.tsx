@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
-export default function Term() {
+export default function Page() {
   return (
     <>
       <Header />
@@ -52,7 +52,7 @@ export default function Term() {
                 You agree not to engage in any unlawful or unauthorized use of
                 our services, including but not limited to: violating any
                 applicable laws or regulations, infringing on our or any third
-                party's intellectual property rights, or engaging in any
+                party&apos;s intellectual property rights, or engaging in any
                 activity that could harm or interfere with the proper
                 functioning of our services.
               </p>

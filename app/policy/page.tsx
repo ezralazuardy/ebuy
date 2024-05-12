@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
-export default function Policy() {
+export default function Page() {
   return (
     <>
       <Header />
@@ -53,8 +53,8 @@ export default function Policy() {
                 You have the right to access, update, and delete your personal
                 information at any time. You can also opt-out of marketing
                 communications and request a copy of your data. If you have any
-                concerns or questions about our privacy practices, please don't
-                hesitate to contact us.
+                concerns or questions about our privacy practices, please
+                don&apos;t hesitate to contact us.
               </p>
             </div>
           </div>
