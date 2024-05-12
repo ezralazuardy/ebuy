@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 
-interface Props {
+type Props = {
   amount?: number;
-}
+};
 
 export default function ProductItemSkeleton({ amount = 8 }: Props) {
   return (

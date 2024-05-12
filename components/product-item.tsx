@@ -3,16 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-const productService = getProductService();
-
-interface Props {
+type Props = {
   search: string;
-}
+};
 
 export default async function ProductItem({ search }: Props) {
-  const items = await productService.getProducts(search);
+  const items = await getProductService().getProducts(search);
   return (
-    <main className="container mx-auto py-12 px-4 md:px-6">
+    <main className="container mx-auto py-12 px-4 md:px-6 min-h-screen">
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {items.map((item: any) => (
           <div

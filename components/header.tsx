@@ -1,8 +1,8 @@
 import Link from "next/link";
+import SearchBar from "@/components/search-bar";
+import { Button } from "@/components/ui/button";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { Package, ShoppingCart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import SearchBar from "@/components/search-bar";
 
 export default function Header() {
   return (

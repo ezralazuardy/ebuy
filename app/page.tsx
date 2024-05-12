@@ -4,12 +4,12 @@ import Footer from "@/components/footer";
 import ProductItem from "@/components/product-item";
 import ProductItemSkeleton from "@/components/product-item-skeleton";
 
-interface Props {
+type Props = {
   searchParams?: {
     search?: string;
     page?: string;
   };
-}
+};
 
 export default async function Products({ searchParams }: Props) {
   const query = searchParams?.search || "";
