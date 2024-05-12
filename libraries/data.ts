@@ -49,4 +49,52 @@ export const products = [
     statement_description: "eBuy Purchase",
     marketing_feature: "Clean effectively, live sustainably",
   },
+  {
+    id: "price_1PFlEFFxwozpGZ72UbQyZRC2",
+    image_url: "/price_1PFlEFFxwozpGZ72UbQyZRC2.jpg",
+    name: "Smart LED Lightbulb",
+    price: 19.99,
+    unit: "Each",
+    short_description: "Control your lights with ease",
+    description:
+      "Upgrade your home lighting with our Smart LED Lightbulb. This innovative bulb connects to your smartphone or smart home hub, allowing you to control the brightness, color temperature, and even set schedules. Create a relaxing ambiance, energize your workspace, or set the perfect mood for any occasion – all from the comfort of your couch. With its long lifespan and energy efficiency, the Smart LED Lightbulb is a smart choice for your home.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Light Up Your Life, Smartly",
+  },
+  {
+    id: "price_1PFlG3FxwozpGZ72hOJZmBLm",
+    image_url: "/price_1PFlG3FxwozpGZ72hOJZmBLm.jpg",
+    name: "Wireless Charging Stand",
+    price: 24.95,
+    unit: "Each",
+    short_description: "Effortless charging for your devices",
+    description:
+      "Simplify your life with our Wireless Charging Stand. Simply place your compatible smartphone on the stand and watch it charge without the hassle of tangled wires. The sleek and stylish design complements any décor, making it a perfect addition to your desk or nightstand. Enjoy the convenience of wireless charging and keep your devices powered up effortlessly.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Power Up Wirelessly, Live Hassle-Free",
+  },
+  {
+    id: "price_1PFlIrFxwozpGZ72HDu8D3hS",
+    image_url: "/price_1PFlIrFxwozpGZ72HDu8D3hS.jpg",
+    name: "Reusable Water Bottle",
+    price: 12.99,
+    unit: "Each",
+    short_description: "Hydrate in style, sustainably",
+    description:
+      "Stay hydrated on the go with our Reusable Water Bottle. Made from durable and BPA-free materials, this bottle is a sustainable and eco-friendly way to keep your thirst quenched throughout the day. The sleek design is available in a variety of colors to match your style. With its convenient size and leak-proof lid, this reusable water bottle is the perfect companion for your active lifestyle. Make a conscious choice for your health and the planet with our Reusable Water Bottle.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Hydrate Eco-Consciously, Stay Stylishly Refreshed",
+  },
+  {
+    id: "price_1PFlKtFxwozpGZ722bZoqY0s",
+    image_url: "/price_1PFlKtFxwozpGZ722bZoqY0s.jpg",
+    name: "Fitness Tracker Watch",
+    price: 79.99,
+    unit: "Each",
+    short_description: "Track your fitness goals effortlessly",
+    description:
+      "Stay motivated and reach your fitness goals with our Fitness Tracker Watch. This sleek and stylish watch tracks your steps, distance, calories burned, and heart rate, allowing you to monitor your progress and stay on top of your fitness journey. It also offers features like sleep tracking and notifications, making it a comprehensive tool for overall well-being. With its comfortable design and long battery life, the Fitness Tracker Watch is your perfect partner in achieving a healthier and more active lifestyle.",
+    statement_description: "eBuy Purchase",
+    marketing_feature: "Level Up Your Fitness Journey, Effortlessly",
+  },
 ];

@@ -11,7 +11,7 @@ import { Package, ShoppingCart } from "lucide-react";
 function GuestHeader() {
   return (
     <header className="flex items-center justify-between px-12 py-4 bg-white shadow-sm dark:bg-gray-950">
-      <Link className="flex items-center gap-2 font-semibold text-lg" href="/">
+      <Link className="flex items-center gap-2 font-semibold text-xl" href="/">
         <Package className="h-6 w-6" />
         <span>{process.env.NEXT_PUBLIC_APP_NAME}</span>
       </Link>
@@ -26,7 +26,7 @@ function AuthenticatedHeader() {
     <SignedIn>
       <header className="flex items-center justify-between px-12 py-4 bg-white shadow-sm dark:bg-gray-950">
         <Link
-          className="flex items-center gap-2 font-semibold text-lg"
+          className="flex items-center gap-2 font-semibold text-xl"
           href="/"
         >
           <Package className="h-6 w-6" />
