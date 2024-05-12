@@ -12,8 +12,8 @@ export default function CartProvider({ children }: Props) {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? ""}
-      successUrl={`${process.env.NEXT_PUBLIC_URL}/payment/success`}
-      cancelUrl={`${process.env.NEXT_PUBLIC_URL}/payment/cancel`}
+      successUrl={`${process.env.NEXT_PUBLIC_APP_URL}/payment/success`}
+      cancelUrl={`${process.env.NEXT_PUBLIC_APP_URL}/payment/cancel`}
       currency="USD"
       shouldPersist={true}
     >
