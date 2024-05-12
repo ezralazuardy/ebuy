@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function SearchBar({ label }: Props) {
-  let pathname = usePathname();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
 
