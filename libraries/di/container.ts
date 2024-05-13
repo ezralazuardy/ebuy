@@ -13,15 +13,3 @@ container.bind(ProductService).to(ProductService).inSingletonScope();
 container.bind(UserService).to(UserService).inSingletonScope();
 
 export default container;
-
-export function getProductRepository(): ProductRepository {
-  return container.get(ProductRepository);
-}
-
-export function getProductService(): ProductService {
-  return container.get(ProductService);
-}
-
-export function getUserService(): UserService {
-  return container.get(UserService);
-}

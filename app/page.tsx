@@ -1,4 +1,4 @@
-import { getProductService } from "@/libraries/di/container";
+import { getProductService } from "@/libraries/di/hook";
 import { Suspense } from "react";
 import ProductList from "@/components/product-list";
 import ProductListSkeleton from "@/components/product-list-skeleton";

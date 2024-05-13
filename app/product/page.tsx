@@ -1,4 +1,4 @@
-import { getProductService } from "@/libraries/di/container";
+import { getProductService } from "@/libraries/di/hook";
 import ProductDetail from "@/components/product-detail";
 import type Product from "@/models/product";
 
