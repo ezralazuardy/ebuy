@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ClerkProvider } from "@clerk/nextjs";
+import AuthProvider from "@/providers/auth-provider";
 import CartProvider from "@/providers/cart-provider";
 import ThemeProvider from "@/providers/theme-provider";
 import Header from "@/components/header";
@@ -30,15 +30,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className}>
-        <ClerkProvider>
-          <CartProvider>
-            <ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <CartProvider>
               <Header />
               {children}
               <Footer />
-            </ThemeProvider>
-          </CartProvider>
-        </ClerkProvider>
+            </CartProvider>
+          </ThemeProvider>
+        </AuthProvider>
         <Analytics />
         <SpeedInsights />
       </body>
