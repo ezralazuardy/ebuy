@@ -20,6 +20,7 @@ function GuestHeader() {
 }
 
 function AuthenticatedHeader() {
+  const showSearchBar = usePathname() !== "/product";
   const { cartCount } = useShoppingCart();
   const cartIsNotEmpty = cartCount && cartCount > 0;
   return (
@@ -33,7 +34,7 @@ function AuthenticatedHeader() {
           <span>{process.env.NEXT_PUBLIC_APP_NAME}</span>
         </Link>
         <div className="flex items-center gap-4">
-          <SearchBar label="Search product..." />
+          {showSearchBar ? <SearchBar label="Search product..." /> : null}
           <Link href="/cart">
             <Button
               className="rounded-full relative"
