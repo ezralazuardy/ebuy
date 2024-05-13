@@ -32,6 +32,8 @@ export default function ProductEntry({ item }: Props) {
         <Image
           alt={item.name}
           src={item.image_url}
+          blurDataURL={item.image_blur_data_url}
+          placeholder="blur"
           className="w-full h-64 object-cover group-hover:opacity-50 transition-opacity"
           height={500}
           width={500}

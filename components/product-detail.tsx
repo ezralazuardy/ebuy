@@ -28,6 +28,8 @@ export default function ProductDetail({ item }: Props) {
         <Image
           alt={item.name}
           src={item.image_url}
+          blurDataURL={item.image_blur_data_url}
+          placeholder="blur"
           className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
           height={600}
           width={600}
