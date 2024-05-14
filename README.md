@@ -8,6 +8,14 @@
 
 A Dummy App for E-Commerce Workflow.
 
+🔗 https://ebuy.vercel.app
+
+<br/>
+
+<img width="1440" alt="ebuy" src="https://github.com/ezralazuardy/ebuy/assets/24422019/a7e0bc79-5cb0-49f7-b3a8-c16428d3f00c" />
+
+> The demo uses [Clerk](https://clerk.com) for the authentication, it should be safe enough to be used.
+
 ### 🚀 quickstart
 
 Please setup your own `.env.local` based on `.env.example` before running the project.
